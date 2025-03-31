@@ -2,7 +2,17 @@
 
 A new Flutter project.
 
+## Compiling Proto
+
+protoc --dart_out=grpc:lib/generated -Iprotos protos/moviematch.proto
+
+## Start Server
+
+dart run .\lib\server\server.dart
+
 ## Getting Started
+
+
 
 This project is a starting point for a Flutter application.
 
