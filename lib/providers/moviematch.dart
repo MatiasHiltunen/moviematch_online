@@ -11,7 +11,7 @@ class MovieMatchProvider extends ChangeNotifier {
   late final ResponseStream<StateMessage> _receive;
 
   MovieMatchProvider() {
-    _channel = ClientChannel('localhost',
+    _channel = ClientChannel('10.0.2.2',
         port: 50051,
         options: ChannelOptions(credentials: ChannelCredentials.insecure()));
 
@@ -23,7 +23,6 @@ class MovieMatchProvider extends ChangeNotifier {
       print("message: ${msg.user}: ${msg.data}");
     });
     
-    send();
   }
 
   void send() {
